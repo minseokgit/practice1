@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+typedef struct {
+	char city[80];
+	char country[80];
+}City;
+typedef struct {
+	int age;
+	char n[20];
+	City city;
+}Student;
+int main() {
+	Student student = { 18,"siro",{"andong","korea"} };
+	printf("나이 : %d\n", student.age);
+	printf("이름은 : %s\n", student.n);
+	printf("city : %s %s\n", student.city.city, student.city.country);
+	return 0;
+}
