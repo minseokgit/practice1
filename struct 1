@@ -1,18 +1,26 @@
 #include <stdio.h>
 
+// City 구조체 정의: 도시와 국가 정보를 저장
 typedef struct {
-	char city[80];
-	char country[80];
-}City;
+    char city[80];    // 도시 이름
+    char country[80]; // 국가 이름
+} City;
+
+// Student 구조체 정의: 학생의 나이, 이름, 주소 정보를 저장
 typedef struct {
-	int age;
-	char n[20];
-	City city;
-}Student;
+    int age;          // 학생 나이
+    char n[20];      // 학생 이름
+    City city;       // 학생의 주소 (City 구조체 사용)
+} Student;
+
 int main() {
-	Student student = { 18,"siro",{"andong","korea"} };
-	printf("나이 : %d\n", student.age);
-	printf("이름은 : %s\n", student.n);
-	printf("city : %s %s\n", student.city.city, student.city.country);
-	return 0;
+    // Student 구조체 변수 초기화
+    Student student = { 18, "siro", {"andong", "korea"} };
+
+    // 학생 정보 출력
+    printf("나이 : %d\n", student.age);                   // 학생 나이 출력
+    printf("이름은 : %s\n", student.n);                   // 학생 이름 출력
+    printf("city : %s %s\n", student.city.city, student.city.country); // 도시 및 국가 출력
+
+    return 0; // 프로그램 정상 종료
 }
