@@ -15,7 +15,7 @@ typedef struct {
 
 int main() {
     // Student 구조체 변수 초기화
-    Student student = { 18, "siro", {"andong", "korea"} };
+    Student student = { 18, "siro", {"seoul", "korea"} };
 
     // 학생 정보 출력
     printf("나이 : %d\n", student.age);                   // 학생 나이 출력
